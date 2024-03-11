@@ -1,5 +1,11 @@
 .header {
-  padding: 30px;
-  border-bottom: 1px solid black;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0 50px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
 }

@@ -1,0 +1,32 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center p {
+  margin-top: 20px
+}
+
+.ikona {
+  width: 70px;
+}
+
+.wyniki h2 {
+  text-align: center
+}
+
+.wynik {
+  display: flex;
+  /* justify-content: center; */
+  margin-left: 37%;
+  margin-top: 30px;
+  gap: 20px
+}
+
+.miniatura {
+  max-width: 70px
+}
+
+.tekst p {
+  margin-top: 20px;
+}
