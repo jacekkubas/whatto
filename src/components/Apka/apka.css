@@ -1,3 +1,8 @@
+.Apka {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -15,10 +20,12 @@
   text-align: center
 }
 
+.wyniki {
+  margin: auto;
+}
+
 .wynik {
   display: flex;
-  /* justify-content: center; */
-  margin-left: 37%;
   margin-top: 30px;
   gap: 20px
 }
