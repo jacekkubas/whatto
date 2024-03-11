@@ -1,7 +1,19 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./middle.css";
 
 const Middle = () => {
+  const input = useRef(null);
+  const volume = useRef(null);
+  let radius;
+
+  let changeRadius = function () {
+    radius = input.current.value;
+  };
+
+  let calculate = function () {
+    volume.current.value = (4 / 3) * Math.PI * Math.pow(radius, 3);
+  };
+
   return (
     <div className="Middle">
       <div id="sphere__calculator">
@@ -12,9 +24,10 @@ const Middle = () => {
           type="number"
           defaultValue="0"
           onChange={changeRadius}
+          ref={input}
         ></input>
         <p className="radius">Volume</p>
-        <input className="volume"></input>
+        <input ref={volume} className="volume"></input>
         <div>
           <button className="btn" onClick={calculate}>
             Calculate
@@ -29,21 +42,6 @@ const Middle = () => {
       </div>
     </div>
   );
-};
-
-// objętość kuli
-
-let radius;
-
-let volume = document.querySelector(".volume");
-
-let changeRadius = function () {
-  radius = document.querySelector(".radiusInput").valueAsNumber;
-};
-
-let calculate = function () {
-  volume.value = (4 / 3) * Math.PI * Math.pow(radius, 3);
-  console.log(volume)
 };
 
 export default Middle;
