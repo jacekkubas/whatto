@@ -44,4 +44,23 @@ const Middle = () => {
   );
 };
 
+let odpal = function() {
+  let strongi = Array.from(document.querySelectorAll('strong'));
+  for (let i = 0; i < strongi.length; i++) {
+    let najazd = function() {
+      if (strongi[i].style.backgroundColor === "red") {
+        strongi[i].style.backgroundColor = "transparent";
+      } else {
+        strongi[i].style.backgroundColor = "red";
+      }
+    }
+    strongi[i].addEventListener("mouseover", najazd);
+  }
+}
+
+setTimeout(() => {
+  odpal();
+}, "1");
+
+
 export default Middle;

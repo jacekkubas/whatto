@@ -11,7 +11,7 @@ const Apka = () => {
   return (
     <div className="Apka">
       <div className="flex-center">
-        <a href="#"><img class="ikona" src={ikona} /></a>
+        <a href="#"><img className="ikona" src={ikona} /></a>
       </div>
       <div className="flex-center">
         <p>Kliknij aby wylosować film na dziś</p>
