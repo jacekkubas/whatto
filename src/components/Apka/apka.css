@@ -12,11 +12,8 @@
   margin-top: 20px
 }
 
-.ikona {
-  width: 70px;
-}
-
 .wyniki h2 {
+  margin-top: 20px;
   text-align: center
 }
 
@@ -30,10 +27,33 @@
   gap: 20px
 }
 
+.schowane {
+  display: none;
+}
+
 .miniatura {
   max-width: 70px
 }
 
 .tekst p {
   margin-top: 20px;
+}
+
+@keyframes obrot {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.ikona {
+  width: 70px;
+  cursor: pointer;
+  animation: obrot 10s linear infinite;
+}
+
+.pauza {
+  animation-play-state: paused;
 }
