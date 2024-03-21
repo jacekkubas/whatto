@@ -3,12 +3,16 @@
   flex-direction: column;
 }
 
+.ukryte {
+  display: none;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
 }
 
-.flex-center p {
+.losuj-tekst {
   margin-top: 20px
 }
 
@@ -23,8 +27,17 @@
 
 .wynik {
   display: flex;
+  align-items: center;
+  align-items: flex-start;
   margin-top: 30px;
   gap: 20px
+}
+
+.zobacz-wiecej {
+  display: block;
+  margin-top: 10px;
+  color: #000;
+  text-decoration: none;
 }
 
 .miniatura {

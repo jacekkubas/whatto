@@ -1,66 +1,63 @@
-import React, {useRef} from "react";
 import "./middle.css";
+import ikona from './camera-shutter.png';
 
-const Middle = () => {
-  const input = useRef(null);
-  const volume = useRef(null);
-  let radius;
+const Apka = () => {
+  const movieArray = [];
+  let wynik1;
 
-  let changeRadius = function () {
-    radius = input.current.value;
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOWYwYWQ2NzMxN2RmYTVmY2UwNDE4ZmFhMWIxNzRkMSIsInN1YiI6IjY1ZjAyMmJlZTE5ZGU5MDE0YmI4MDczNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jBN6Blu-VnBAxc-U8IQtkqJghoe3oDDLJhjnX4wMjTU'
+    }
   };
-
-  let calculate = function () {
-    volume.current.value = (4 / 3) * Math.PI * Math.pow(radius, 3);
-  };
+  let wyswietl = function() {
+    return (
+      <div className="wyniki">
+          <h2>Filmy na dziś</h2>
+            <div className="wynik">
+              <img className="miniatura" src={`https://image.tmdb.org/t/p/original/${wynik1.poster_path}`} alt="" />
+              <div className="tekst">
+                <h3>{`${wynik1.title}  (${(wynik1.release_date).slice(0, 4)})`}</h3>
+                <p>{wynik1.overview}</p>
+                <strong><a target="_blank" className="zobacz-wiecej" href={`https://www.themoviedb.org/movie/${wynik1.id}`}>Zobacz więcej</a></strong>
+              </div>  
+            </div>
+        </div>
+    )
+  }
+  
+// FETCH Z 1 STRONY
+  const pokaz = async () => {
+    await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=1`, options)
+    .then(response => response.json())
+    .then(response => movieArray.push(...response.results))
+    .catch(err => console.error(err));
+    await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=2`, options)
+    .then(response => response.json())
+    .then(response => movieArray.push(...response.results))
+    .catch(err => console.error(err));
+  
+    let ikonka = document.querySelector('.ikona');
+    ikonka.classList.toggle('pauza');
+    let losujTekst = document.querySelector('.losuj-tekst');
+    losujTekst.classList.toggle('ukryte');
+    wynik1 = movieArray[Math.floor(Math.random(movieArray.length) * 100)];
+    console.log(movieArray);
+  }
 
   return (
-    <div className="Middle">
-      <div id="sphere__calculator">
-        <h2>Input radius value and get the volume of a sphere</h2>
-        <p className="radius">Radius</p>
-        <input
-          className="radiusInput"
-          type="number"
-          defaultValue="0"
-          onChange={changeRadius}
-          ref={input}
-        ></input>
-        <p className="radius">Volume</p>
-        <input ref={volume} className="volume"></input>
-        <div>
-          <button className="btn" onClick={calculate}>
-            Calculate
-          </button>
-        </div>
+    <div className="Apka">
+      <div className="flex-center">
+        <img onClick={pokaz} className="ikona" src={ikona} alt='' />
       </div>
-      <div id="najazd__myszy">
-        <h2>Najazd myszy</h2>
-        <div style={{marginTop: "10px"}}>
-        <p><strong>We</strong> have just started <strong>this</strong> section for the users <strong>beginner</strong> to intermediate who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
-        </div>
+      <div className="flex-center">
+        <p className ="losuj-tekst">Kliknij aby wylosować film na dziś</p>
       </div>
+        {setTimeout(wyswietl, 5000)}
     </div>
   );
 };
 
-let odpal = function() {
-  let strongi = Array.from(document.querySelectorAll('strong'));
-  for (let i = 0; i < strongi.length; i++) {
-    let najazd = function() {
-      if (strongi[i].style.backgroundColor === "red") {
-        strongi[i].style.backgroundColor = "transparent";
-      } else {
-        strongi[i].style.backgroundColor = "red";
-      }
-    }
-    strongi[i].addEventListener("mouseover", najazd);
-  }
-}
-
-setTimeout(() => {
-  odpal();
-}, "1");
-
-
-export default Middle;
+export default Apka;

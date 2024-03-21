@@ -4,6 +4,7 @@ import ikona from './camera-shutter.png';
 
 const Apka = () => {
   const [movieArray, setMovieArray] = useState([]);
+  const finalData = [];
 
   const options = {
     method: 'GET',
@@ -13,16 +14,36 @@ const Apka = () => {
     }
   };
   
-  const pokaz = async () => {
-    await fetch('https://api.themoviedb.org/3/movie/top_rated?page=1', options)
-    .then(response => response.json())
-    .then(response => setMovieArray([ ...movieArray, ...response.results]))
-    .catch(err => console.error(err));
+// FETCH Z 1 STRONY
+  // const pokaz = async () => {
+  //   await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=1`, options)
+  //   .then(response => response.json())
+  //   .then(response => setMovieArray([ ...movieArray, ...response.results]))
+  //   .catch(err => console.error(err));
+  
+  //   let ikonka = document.querySelector('.ikona');
+  //   ikonka.classList.toggle('pauza');
+  //   let losujTekst = document.querySelector('.losuj-tekst');
+  //   losujTekst.classList.toggle('ukryte');
+  // }
 
-    let ikonka = document.querySelector('.ikona');
-    ikonka.classList.toggle('pauza');
-    console.log(movieArray);
-  }
+// FETCH Z LOOPEM
+
+const pokaz = async () => {
+  for (let i = 1; i < 2; i++ ) {
+  await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=${i}`, options)
+  .then(response => response.json())
+  .then(response => setMovieArray([ ...movieArray, ...response.results]))
+  .catch(err => console.error(err));
+}
+  let ikonka = document.querySelector('.ikona');
+  ikonka.classList.toggle('pauza');
+  let losujTekst = document.querySelector('.losuj-tekst');
+  losujTekst.classList.toggle('ukryte');
+}
+
+
+  console.log(movieArray);
 
   return (
     <div className="Apka">
@@ -30,17 +51,18 @@ const Apka = () => {
         <img onClick={pokaz} className="ikona" src={ikona} alt='' />
       </div>
       <div className="flex-center">
-        <p>Kliknij aby wylosować film na dziś</p>
+        <p className ="losuj-tekst">Kliknij aby wylosować film na dziś</p>
       </div>
       {movieArray.length > 0 && (
         <div className="wyniki">
           <h2>Filmy na dziś</h2>
           {movieArray.map((movie) => (
               <div className="wynik" key={movie.id}>
-                <img className="miniatura" src={movie.img} alt="" />
+                <img className="miniatura" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
                 <div className="tekst">
-                  <h3>{movie.title}</h3>
+                  <h3>{`${movie.title}  (${(movie.release_date).slice(0, 4)})`}</h3>
                   <p>{movie.overview}</p>
+                  <strong><a target="_blank" className="zobacz-wiecej" href={`https://www.themoviedb.org/movie/${movie.id}`}>Zobacz więcej</a></strong>
                 </div>  
               </div>
             )
