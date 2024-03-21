@@ -19,6 +19,8 @@ const Apka = () => {
     .then(response => setMovieArray([ ...movieArray, ...response.results]))
     .catch(err => console.error(err));
 
+    let ikonka = document.querySelector('.ikona');
+    ikonka.classList.toggle('pauza');
     console.log(movieArray);
   }
 
