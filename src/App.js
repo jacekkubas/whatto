@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header'
 // import Apka from './components/Apka'
 import Middle from './components/Middle'
+import Test from './components/Test'
 import Footer from './components/Footer'
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
   return (
     <div className="container">
       <Header />
-/* Apka */
-      <Middle />
+      /* Apka */
+       <Middle />
+      <Test />
       <Footer />
     </div>
   );
