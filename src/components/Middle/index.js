@@ -28,7 +28,7 @@ const Apka = () => {
     )
   }
   
-// FETCH Z 1 STRONY
+// FETCH Z 2 STRON
   const pokaz = async () => {
     await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=1`, options)
     .then(response => response.json())
@@ -43,8 +43,9 @@ const Apka = () => {
     ikonka.classList.toggle('pauza');
     let losujTekst = document.querySelector('.losuj-tekst');
     losujTekst.classList.toggle('ukryte');
-    wynik1 = movieArray[Math.floor(Math.random(movieArray.length) * 100)];
+    wynik1 = movieArray[Math.floor(Math.random() * movieArray.length)];
     console.log(movieArray);
+    console.log(wynik1);
   }
 
   return (
