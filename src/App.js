@@ -9,9 +9,9 @@ function App() {
   
 
   return (
-    <div className="container">
+    <div>
       <Header />
-      /* Apka */
+      
        <Middle />
       <Test />
       <Footer />
