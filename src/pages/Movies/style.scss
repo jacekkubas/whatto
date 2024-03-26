@@ -1,0 +1,73 @@
+.Apka {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  background-color: #474C72;
+}
+
+.wrapper {
+  padding: 0 20px;
+}
+
+.losuj-tekst {
+  margin-top: 20px
+}
+
+.top h2 {
+  margin: 20px 0 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.top {
+  background-color: #474C72;
+}
+
+.wyniki {
+  border-radius: 30px 30px 0 0;
+  background: linear-gradient(151.45deg, #C8E6FF -1.14%, #83A4C4 4.42%, #66759C 12.34%, #475672 22.28%, #474C72 31.62%, #383D60 52.72%, #242842 80.29%);
+}
+
+.wyniki .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wynik {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 30px;
+  gap: 20px
+}
+
+.zobacz-wiecej {
+  display: block;
+  margin-top: 10px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.miniatura {
+  max-width: 90px;
+  border-radius: 10px;
+}
+
+.tekst p {
+  margin-top: 10px;
+}
+
+.overview {
+  height: 82px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.wyniki h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wyniki p, .wyniki a {
+  font-size: 12px;
+}

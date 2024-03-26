@@ -1,0 +1,21 @@
+.zakladki {
+  display: flex;
+  background-color: #242842;
+}
+
+.zakladki a {
+  width: 50%;
+  text-align: center;
+  padding: 20px 0 20px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.zakladka-film.active {
+  border-bottom: 2px solid #D03E00;
+}
+
+.zakladka-danie.active {
+  border-bottom: 2px solid #D03E00;
+}
