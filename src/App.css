@@ -9,6 +9,11 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 1200px;
+  max-width: 100%;
   margin: auto;
+}
+
+.page {
+  padding: 60px 0;
 }
