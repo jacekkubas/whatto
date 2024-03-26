@@ -1,7 +1,6 @@
 import "./middle.css";
 import harry from "../Apka/1.jpg";
 import kebab from "../Apka/kebab.jpg";
-import babelki from "../Apka/babelki.png";
 import lala from "../Apka/lala.png";
 import shuffle from "../Apka/shuffle.png";
 
@@ -115,14 +114,82 @@ const Apka = () => {
               <button onClick={pokazFilm} className="gorny-button przycisk">
                 <span>Film</span>
               </button>
-              <img className="babelki" src={babelki} />
+              <svg className="babelki odwroc"
+                width={58}
+                height={41}
+                viewBox="0 0 58 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="9.4706"
+                    cy="9.4706"
+                    r="9.4706"
+                    transform="matrix(-1 0 0 1 57.0386 0.133057)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="7.10295"
+                    cy="7.10295"
+                    r="7.10295"
+                    transform="matrix(-1 0 0 1 30.7781 18.8176)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="3.55147"
+                    cy="3.55147"
+                    r="3.55147"
+                    transform="matrix(-1 0 0 1 7.25659 33.0237)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+              </svg>
             </div>
             <img className="lala" src={lala} />
             <div className="pomysl pomysl-prawo">
               <button onClick={pokazDanie} className="gorny-button przycisk">
                 <span>Danie</span>
               </button>
-              <img className="babelki odwroc" src={babelki} />
+              <svg className="babelki"
+                width={58}
+                height={41}
+                viewBox="0 0 58 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="9.4706"
+                    cy="9.4706"
+                    r="9.4706"
+                    transform="matrix(-1 0 0 1 57.0386 0.133057)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="7.10295"
+                    cy="7.10295"
+                    r="7.10295"
+                    transform="matrix(-1 0 0 1 30.7781 18.8176)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <g style={{ mixBlendMode: "soft-light" }}>
+                  <circle
+                    cx="3.55147"
+                    cy="3.55147"
+                    r="3.55147"
+                    transform="matrix(-1 0 0 1 7.25659 33.0237)"
+                    fill="#D9D9D9"
+                  />
+                </g>
+              </svg>
             </div>
           </div>
         </div>

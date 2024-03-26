@@ -4,7 +4,7 @@ import Apka from '../../components/Apka'
 const Movies = () => {
   return (
     <div className="page">
-      <div className="container">
+      <div>
         <div>Movies</div>
         <Apka />
       </div>

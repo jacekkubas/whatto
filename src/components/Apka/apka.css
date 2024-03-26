@@ -1,10 +1,24 @@
 .Apka {
   display: flex;
   flex-direction: column;
+  color: #FFF;
+  background-color: #474C72;
 }
 
-.ukryte {
-  display: none;
+.wrapper {
+  padding: 0 20px;
+}
+
+.gora-bg {
+  background-image: url('/src/components/Apka/okregi-tlo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -30px;
+}
+
+.gorny-button {
+  background: rgba(217,217,217,0.4);
 }
 
 .flex-center {
@@ -12,57 +26,162 @@
   justify-content: center;
 }
 
+.dolny-button {
+  background: linear-gradient(90deg, #D47217 0%, #D03E00 100%);
+  margin: 50px 0 30px;
+}
+
+.przycisk {
+  font-family: "Nunito";
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.gorny-button:hover, .gorny-button:hover + .babelki circle {
+  background: #D9D9D9;
+  color: #000;
+  transition: All 0.5s;
+  opacity: 1
+}
+
+.babelki circle {
+  opacity: 0.4;
+}
+
+.przycisk span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 40px;
+}
+
+.ukryte {
+  display: none;
+}
+
+.gora-buttony {
+  display: flex;
+  justify-content: center;
+  margin: 70px auto 10px;
+  max-width: 315px;
+}
+
+.pomysl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pomysl-lewo {
+  margin-right: -50px
+}
+
+.pomysl-prawo {
+  margin-left: -50px
+}
+
+.lala {
+  margin-top: 60px;
+  max-width: 60%;
+}
+
+.odwroc {
+  transform: scaleX(-1);
+}
+
+.dol {
+  border-radius: 30px 30px 0 0;
+  background: linear-gradient(151.45deg, #C8E6FF -1.14%, #83A4C4 4.42%, #66759C 12.34%, #475672 22.28%, #474C72 31.62%, #383D60 52.72%, #242842 80.29%);
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7em;
+  margin: 20px 0 20px;
+}
+
+.dol p {
+  font-size: 12px;
+  margin-bottom: 150px;
+}
+
 .losuj-tekst {
   margin-top: 20px
 }
 
-.wyniki h2 {
-  margin-top: 20px;
-  text-align: center
+.top h2 {
+  margin: 20px 0 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.top {
+  background-color: #474C72;
 }
 
 .wyniki {
-  margin: auto;
+  border-radius: 30px 30px 0 0;
+  background: linear-gradient(151.45deg, #C8E6FF -1.14%, #83A4C4 4.42%, #66759C 12.34%, #475672 22.28%, #474C72 31.62%, #383D60 52.72%, #242842 80.29%);
+}
+
+.wyniki .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wynik {
   display: flex;
-  align-items: center;
   align-items: flex-start;
-  margin-top: 30px;
+  padding-top: 30px;
   gap: 20px
 }
 
 .zobacz-wiecej {
   display: block;
   margin-top: 10px;
-  color: #000;
+  color: #FFF;
   text-decoration: none;
 }
 
 .miniatura {
-  max-width: 70px
+  max-width: 90px;
+  border-radius: 10px;
 }
 
 .tekst p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-@keyframes obrot {
-  from {
-    transform: rotate(0deg)
-  }
-  to {
-    transform: rotate(360deg)
-  }
+.zakladki {
+  display: flex;
+  background-color: #242842;
 }
 
-.ikona {
-  width: 70px;
+.zakladki span {
+  width: 50%;
+  text-align: center;
+  padding: 20px 0 20px;
   cursor: pointer;
-  animation: obrot 10s linear infinite;
 }
 
-.pauza {
-  animation-play-state: paused;
+.zakladka-film.active, .zakladka-danie.active {
+  border-bottom: 2px solid #D03E00;
+} {
+  border-bottom: 2px solid #D03E00;
+}
+
+.wyniki h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wyniki p, .wyniki a {
+  font-size: 12px;
 }
