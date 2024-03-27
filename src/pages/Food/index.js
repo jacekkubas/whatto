@@ -4,14 +4,14 @@ import Menu from '../../components/Menu';
 
 const Food = () => {
   const [foodArray, setFoodArray] = useState([]);
-  const foodApiKey = "1f24950fbccf47cb97b9b51802c4dda7";
+  const foodApiKey = "d892c4e77bbd43c49f4a56781de98113";
 
   const getFood = async () => {
     await fetch(`https://api.spoonacular.com/recipes/random?number=3&apiKey=${foodApiKey}`)
     .then(response => response.json())
     .then(response => {
-      console.log(response);
       setFoodArray([...response.recipes]);
+      console.log(foodArray);
     })
     .catch(err => console.error(err));
   }
@@ -21,18 +21,18 @@ const Food = () => {
   }, [])
 
   return (
-    <div className="Apka">
+    <div className="food">
       <Menu text="Dziś przygotuję:" active="food" />
       {foodArray.length > 0 && (
-        <div className="wyniki">
+        <div className="food__wyniki">
           {foodArray.map((food) => (
               <div className="wrapper">
-                <div className="wynik" key={food.id}>
-                  <img className="miniatura" src={`https://image.tmdb.org/t/p/original/${food.poster_path}`} alt="" />
-                  <div className="tekst">
-                    <h3>{`${food.title}  (${(food.release_date).slice(0, 4)})`}</h3>
-                    <div className="overview"><span>{food.overview}</span></div>
-                    <strong><a target="_blank" className="zobacz-wiecej" href={`https://www.thefooddb.org/food/${food.id}`} rel="noreferrer">Zobacz więcej</a></strong>
+                <div className="food__wynik" key={food.id}>
+                  <img className="food__miniatura" src={`${food.image}`} alt="" />
+                  <div className="food__tekst">
+                    <h3>{`${food.title}  (${food.readyInMinutes} min)`}</h3>
+                    <p>{(food.summary).replace(/<\/?[^>]+(>|$)/g, "")}</p>
+                    <strong><a target="_blank" className="food__zobacz-wiecej" href={food.sourceUrl} rel="noreferrer">recipe</a></strong>
                   </div>  
                 </div>
               </div>

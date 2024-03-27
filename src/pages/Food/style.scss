@@ -1,0 +1,44 @@
+.food {
+
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    background-color: #474C72;
+    
+    &__wyniki {
+        border-radius: 30px 30px 0 0;
+        background: linear-gradient(151.45deg, #C8E6FF -1.14%, #83A4C4 4.42%, #66759C 12.34%, #475672 22.28%, #474C72 31.62%, #383D60 52.72%, #242842 80.29%);
+    }
+
+    &__wynik {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 30px;
+        gap: 20px
+      }
+
+    &__zobacz-wiecej {
+        display: block;
+        margin-top: 10px;
+        color: #FFF;
+        text-decoration: none;
+      }
+
+    &__miniatura {
+        max-width: 90px;
+        border-radius: 10px;
+      }
+
+    &__tekst p {
+        margin-top: 10px;
+      }
+
+    &__wyniki h3 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+    &__wyniki p, .wyniki a {
+        font-size: 12px;
+      }
+}
