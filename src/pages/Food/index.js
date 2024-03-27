@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import shuffle from "../../assets/shuffle.png";
 import Menu from '../../components/Menu';
-import {random} from '../../utils';
 
 const Food = () => {
   const [foodArray, setFoodArray] = useState([]);
-
   const foodApiKey = "1f24950fbccf47cb97b9b51802c4dda7";
 
   const getFood = async () => {
-    await fetch(`https://api.spoonacular.com/recipes/random?number=100&apiKey=${foodApiKey}`)
+    await fetch(`https://api.spoonacular.com/recipes/random?number=3&apiKey=${foodApiKey}`)
     .then(response => response.json())
     .then(response => {
-      const foodArray = [response.results[random(0, 99)], response.results[random(0, 99)], response.results[random(0, 99)]];
-      setFoodArray([...foodArray]);
-      console.log(foodArray);
+      console.log(response);
+      setFoodArray([...response.recipes]);
     })
     .catch(err => console.error(err));
   }
-  console.log(foodArray);
 
   useEffect(() => {
     getFood();

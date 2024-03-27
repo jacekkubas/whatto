@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import shuffle from "../../assets/shuffle.png";
 import {random} from '../../utils';
 import Menu from '../../components/Menu'
+import ListElement from '../../components/ListElement'
 import './style.scss';
 
 const Movies = () => {
@@ -39,16 +40,7 @@ const Movies = () => {
       {movieArray.length > 0 && (
         <div className="wyniki">
           {movieArray.map((movie) => (
-              <div className="wrapper">
-                <div className="wynik" key={movie.id}>
-                  <img className="miniatura" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
-                  <div className="tekst">
-                    <h3>{`${movie.title}  (${(movie.release_date).slice(0, 4)})`}</h3>
-                    <div className="overview"><span>{movie.overview}</span></div>
-                    <strong><a target="_blank" className="zobacz-wiecej" href={`https://www.themoviedb.org/movie/${movie.id}`} rel="noreferrer">Zobacz więcej</a></strong>
-                  </div>  
-                </div>
-              </div>
+              <ListElement data={movie} />
             )
           )}
           <div className="flex-center">

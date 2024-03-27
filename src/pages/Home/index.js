@@ -3,6 +3,7 @@ import lala from "../../assets/lala.png";
 import Bubbles from '../../components/Bubbles';
 import './style.scss';
 import { Link } from 'react-router-dom';
+import Counter from '../../components/Counter'
 
 const Home = () => {
   return (
@@ -41,6 +42,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Counter />
     </div>
   )
 }
