@@ -40,7 +40,7 @@ const Movies = () => {
       {movieArray.length > 0 && (
         <div className="wyniki">
           {movieArray.map((movie) => (
-              <ListElement data={movie} />
+              <ListElement data={movie} key={movie.id} />
             )
           )}
           <div className="flex-center">

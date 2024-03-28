@@ -6,7 +6,7 @@ const ListElement = ({data}) => {
 
   return (
     <div className="wrapper">
-      <div className="wynik" key={data.id}>
+      <div className="wynik">
         <img className="miniatura" src={`https://image.tmdb.org/t/p/original/${data.poster_path}`} alt="" />
         <div className="tekst">
           <h3>{`${data.title}  (${year})`}</h3>
