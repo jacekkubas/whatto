@@ -2,6 +2,7 @@ import './global.scss';
 import Home from './pages/Home'
 import Movies from './pages/Movies'
 import Food from './pages/Food'
+import Slider from './pages/Slider'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

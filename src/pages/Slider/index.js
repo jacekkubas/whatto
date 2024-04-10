@@ -25,7 +25,9 @@ const Slider = () => {
         }
     }
 
-    // window.addEventListener("load", setInterval(handleNext, 5000));
+    // const autoSlide = setInterval(handleNext, 5000)
+
+    // window.addEventListener("load", autoSlide);
 
     const pauseSlide = () => {
         console.log('mouseover')
