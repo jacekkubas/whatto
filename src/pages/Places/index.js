@@ -1,23 +1,22 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./style.scss";
 
-const Places = () => {
-  const continents = {
-    "North America": {
-      "United States": ["Chicago", "New York", "Miami"],
-      Canada: ["Toronto", "Quebec"],
-    },
-    Asia: {
-      Japan: ["Osaka", "Edo", "Tokyo"],
-      China: ["Beijing", "Wuhan"],
-    },
-    Europe: {
-      Poland: ["Warsaw", "Cracow", "Bialystok"],
-      Germany: ["Frankfurt", "Berlin", "Hamburg"],
-    },
-  };
+const continents = {
+  "North America": {
+    "United States": ["Chicago", "New York", "Miami"],
+    Canada: ["Toronto", "Quebec"],
+  },
+  Asia: {
+    Japan: ["Osaka", "Edo", "Tokyo"],
+    China: ["Beijing", "Wuhan"],
+  },
+  Europe: {
+    Poland: ["Warsaw", "Cracow", "Bialystok"],
+    Germany: ["Frankfurt", "Berlin", "Hamburg"],
+  },
+};
 
+const Places = () => {
   const [continent, setContinent] = useState("");
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
