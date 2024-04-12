@@ -3,65 +3,63 @@ import React, { useState } from "react";
 import "./style.scss";
 
 const Places = () => {
-
   const continents = {
     "North America": {
-        "United States": ["Chicago", "New York", "Miami"],
-        "Canada": ["Toronto", "Quebec"]
+      "United States": ["Chicago", "New York", "Miami"],
+      Canada: ["Toronto", "Quebec"],
     },
-    "Asia": {
-        "Japan": ["Osaka", "Edo", "Tokyo"],
-        "China": ["Beijing", "Wuhan"]
+    Asia: {
+      Japan: ["Osaka", "Edo", "Tokyo"],
+      China: ["Beijing", "Wuhan"],
     },
-    "Europe": {
+    Europe: {
+      Poland: ["Warsaw", "Cracow", "Bialystok"],
+      Germany: ["Frankfurt", "Berlin", "Hamburg"],
+    },
+  };
 
-        "Poland": ["Warsaw", "Cracow", "Bialystok"],
-        "Germany": ["Frankfurt", "Berlin", "Hamburg"],
-      
-    }
-  }
-
-  const [continent, setContinent] = useState([]);
-  const [country, setCountry] = useState([]);
+  const [continent, setContinent] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
 
   const handleContinentChange = (event) => {
-    setContinent(Object.keys(continents[event.target.value]));
-    console.log(continent)
-  }
+    setContinent(event.target.value);
+  };
 
   const handleCountryChange = (event) => {
+    setCountry(event.target.value);
+  };
 
-    continent.map((x) => {
-      setCountry(Object.keys(continent[event.target.value]))
-    })
-
-    // setCountry(Object.keys(country[event.target.value]));
-    console.log(country)
-  }
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
 
   return (
     <div>
-      <select className="continents" onChange={handleContinentChange}>
-        {Object.keys(continents).map((x) => (
+      <div>
+        <select className="continents" onChange={handleContinentChange}>
+          {Object.keys(continents).map((x) => (
+            <option>{x}</option>
+          ))}
+        </select>
+        {continent && (
+          <select className="countries" onChange={handleCountryChange}>
+            {Object.keys(continents[continent]).map((x) => (
               <option>{x}</option>
-            )
-          )}
-      </select>
-      <select className="countries" onChange={handleCountryChange}>
-      {continent.map((x) => (
+            ))}
+          </select>
+        )}
+        {country && (
+          <select onChange={handleCityChange}>
+            {continents[continent][country].map((x) => (
               <option>{x}</option>
-            )
-          )}
-      </select>
-      <select>
-      {country.map((x) => (
-              <option>{x}</option>
-            )
-          )}
-      </select>
+            ))}
+          </select>
+        )}
+      </div>
+      {city && <h1 style={{ color: "#fff" }}>Wybrane miasto: {city}</h1>}
     </div>
-
-  )
+  );
 };
 
 export default Places;
