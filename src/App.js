@@ -6,6 +6,7 @@ import Slider from './pages/Slider'
 import Cities from './pages/Cities'
 import Places from './pages/Places'
 import Login from './pages/Login'
+import Hotel from './pages/Hotel'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/cities" element={<Cities />} />
           <Route path="/places" element={<Places />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/hotel" element={<Hotel />} />
         </Routes>
       </BrowserRouter>
     </div>
