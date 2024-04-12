@@ -5,23 +5,19 @@ import "./style.scss";
 const Places = () => {
 
   const continents = {
-    northAmerica: {
-      countries: {
-        unitedStates: ["Chicago", "New York", "Miami"],
-        canada: ["Toronto", "Quebec"]
-      }
+    "North America": {
+        "United States": ["Chicago", "New York", "Miami"],
+        "Canada": ["Toronto", "Quebec"]
     },
-    asia: {
-      countries: {
-        japan: ["Osaka", "Edo", "Tokyo"],
-        china: ["Beijing", "Wuhan"]
-      }
+    "Asia": {
+        "Japan": ["Osaka", "Edo", "Tokyo"],
+        "China": ["Beijing", "Wuhan"]
     },
-    europe: {
-      countries: {
-        poland: ["Warsaw", "Cracow", "Bialystok"],
-        germany: ["Frankfurt", "Berlin", "Hamburg"],
-      }
+    "Europe": {
+
+        "Poland": ["Warsaw", "Cracow", "Bialystok"],
+        "Germany": ["Frankfurt", "Berlin", "Hamburg"],
+      
     }
   }
 
@@ -29,26 +25,33 @@ const Places = () => {
   const [country, setCountry] = useState([]);
 
   const handleContinentChange = (event) => {
-    setContinent(continents[event.target.value]);
-    console.log(continent);
+    setContinent(Object.keys(continents[event.target.value]));
+    console.log(continent)
   }
 
   const handleCountryChange = (event) => {
-    setCountry(continent.countries[event.target.value]);
+
+    continent.map((x) => {
+      setCountry(Object.keys(continent[event.target.value]))
+    })
+
+    // setCountry(Object.keys(country[event.target.value]));
+    console.log(country)
   }
 
   return (
     <div>
       <select className="continents" onChange={handleContinentChange}>
-        <option value="northAmerica">North America</option>
-        <option value="europe">Europe</option>
-        <option value="asia">Asia</option>
-      </select>
-      <select className="countries" onChange={handleCountryChange}>
-      {/* {continent.countries.map((x) => (
+        {Object.keys(continents).map((x) => (
               <option>{x}</option>
             )
-          )} */}
+          )}
+      </select>
+      <select className="countries" onChange={handleCountryChange}>
+      {continent.map((x) => (
+              <option>{x}</option>
+            )
+          )}
       </select>
       <select>
       {country.map((x) => (
