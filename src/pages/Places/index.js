@@ -38,20 +38,20 @@ const Places = () => {
       <div>
         <select className="continents" onChange={handleContinentChange}>
           {Object.keys(continents).map((x) => (
-            <option>{x}</option>
+            <option key={x}>{x}</option>
           ))}
         </select>
         {continent && (
           <select className="countries" onChange={handleCountryChange}>
             {Object.keys(continents[continent]).map((x) => (
-              <option>{x}</option>
+              <option key={x}>{x}</option>
             ))}
           </select>
         )}
         {country && (
           <select onChange={handleCityChange}>
             {continents[continent][country].map((x) => (
-              <option>{x}</option>
+              <option key={x}>{x}</option>
             ))}
           </select>
         )}
