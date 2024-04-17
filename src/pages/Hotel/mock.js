@@ -4,8 +4,8 @@ import hotelPhoto3 from "./hotel3.jpg";
 import hotelPhoto4 from "./hotel4.jpg";
 import hotelPhoto5 from "./hotel5.jpg";
 
-export const mockData = {
-  "Hotel 1": {
+export const mockData = [
+   {
     Name: "Hotel 1",
     Country: "United States",
     City: "Miami",
@@ -19,7 +19,7 @@ export const mockData = {
     Price: 123,
     Available: ["22-01-2020", "22-01-2021"],
   },
-  "Hotel 2": {
+  {
     Name: "Hotel 2",
     Country: "Italy",
     City: "Rome",
@@ -33,7 +33,7 @@ export const mockData = {
     Price: 103,
     Available: ["23-01-2020", "23-01-2021"],
   },
-  "Hotel 3": {
+  {
     Name: "Hotel 3",
     Country: "Poland",
     City: "Warsaw",
@@ -47,7 +47,7 @@ export const mockData = {
     Price: 153,
     Available: ["24-01-2020", "24-01-2021"],
   },
-  "Hotel 4": {
+  {
     Name: "Hotel 4",
     Country: "Japan",
     City: "Tokyo",
@@ -61,7 +61,7 @@ export const mockData = {
     Price: 253,
     Available: ["25-01-2020", "25-01-2021"],
   },
-  "Hotel 5": {
+  {
     Name: "Hotel 4",
     Country: "Belgium",
     City: "Gent",
@@ -75,4 +75,4 @@ export const mockData = {
     Price: 143,
     Available: ["27-01-2020", "27-01-2021"],
   },
-};
+];
