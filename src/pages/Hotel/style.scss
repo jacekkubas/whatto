@@ -3,27 +3,34 @@
     // display: flex;
     // justify-content: center;
 
-    button {
+    .button {
         background-color: #E5E5E5;
         border-radius: 5px;
         border: 2px solid #B0B0B0;
         display: block;
-        margin: 50px auto;
         padding: 15px 50px;
         font-weight: 600;
         font-size: 16px;
+        cursor: pointer;
+    }
+
+    .button-top {
+        margin: 50px auto;
     }
 
     p {
         color: #000;
     }
 
-    &__box {
-        display: flex;
-        margin: 0 auto 50px;
-        background-color: #F5F5F5;
+    .single-hotel {
         border: 2px solid #B0B0B0;
         border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: flex;
+        background-color: #F5F5F5;
         gap: 30px;
 
         .description {
@@ -34,6 +41,10 @@
     &__2columns {
         display: flex;
         justify-content: space-between;
+
+        &.bottom {
+            margin: 70px 0;
+        }
     }
 
     &__left {
@@ -49,6 +60,7 @@
     &__right {
         width: 60%;
         margin-top: 50px;
+        padding-right: 20px;
 
         h2 {
             font-size: 30px;
@@ -62,5 +74,68 @@
             font-size: 30px;
             margin-right: 70px;
         }
+    }
+
+    &__align-right {
+        text-align: right;
+    }
+
+    &__reviews {
+        position: relative;
+        z-index: -1;
+        background-color: #BBBBBB;
+        padding: 50px;
+        animation-duration: 1s;
+    }
+
+    .opened {
+        animation-name: slide-down;
+    }
+
+    .closed {
+        animation-name: slide-up;
+    }
+
+    @keyframes slide-down {
+        0%{
+            transform: translateY(-300px)
+        }
+
+       100%{
+        transform: translateY(0)
+       }
+      }
+
+    @keyframes slide-up {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+    transform: translateY(300px);
+    }
+    }
+
+    &__review {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__rating {
+        background-color: #E5E5E5;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    &__separator {
+        border: 1px solid gray;
+        width: 100%;
+        margin: 30px 0;
     }
 }
