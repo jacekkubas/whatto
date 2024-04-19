@@ -4,6 +4,8 @@ import hotelPhoto3 from "./hotel3.jpg";
 import hotelPhoto4 from "./hotel4.jpg";
 import hotelPhoto5 from "./hotel5.jpg";
 
+// export const mockData = [];
+
 export const mockData = [
    {
     Name: "Hotel 1",
@@ -98,6 +100,25 @@ export const mockData = [
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 5,
+    Price: 143,
+    Available: ["27-01-2020", "27-01-2021"],
+  },
+  {
+    Name: "Hotel 6",
+    Country: "Australia",
+    City: "Sydney",
+    Photo: { hotelPhoto1 },
+    Description:
+      "Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida.",
+      Review1Author: "Mary Jane",
+      Review1isPositive: true,
+    Review1:
+      "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
+      Review2Author: "John Doe",
+      Review2isPositive: false,
+    Review2:
+      "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
+    Stars: 1,
     Price: 143,
     Available: ["27-01-2020", "27-01-2021"],
   },

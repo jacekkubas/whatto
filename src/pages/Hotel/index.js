@@ -7,20 +7,27 @@ const Hotel = () => {
 
   const [showReviews, setShowReviews] = useState(false);
 
+  const [resultsLoaded, setResultsLoaded] = useState(0);
+
+  const loadMore = () => {
+    setResultsLoaded(resultsLoaded + 3);
+  }
+
   useEffect(() => {
     setTimeout(function () {
-      setData(mockData);
+      setData(mockData.slice(0,resultsLoaded));
     }, 50);
-  }, []);
+    console.log(data);
+  }, [loadMore]);
 
   const handleReviews = () => {
-    setShowReviews(!showReviews)
+    setShowReviews(!showReviews);
   };
 
   return (
     <div className="hotel">
-      <button className="button button-top">Load Hotels</button>
-      {data &&
+      <h1>Hotels4U</h1>
+      {data ? data &&
         data.map((hotel) => {
           return (
             <div className="container">
@@ -50,7 +57,7 @@ const Hotel = () => {
                     <p className="description">{hotel.Description}</p>
                     <div className="hotel__2columns bottom">
                       <button className="button" onClick={handleReviews}>
-                        Show reviews
+                        {showReviews ? "Hide" : "Show"} reviews
                       </button>
                       <div>
                         <p className="hotel__align-right">
@@ -69,7 +76,7 @@ const Hotel = () => {
                     <div className="hotel__review">
                       <div>
                         <div className="hotel__rating">
-                          <p>+</p>
+                          <p>{hotel.Review1isPositive === true ? "+" : "-"}</p>
                         </div>
                       </div>
                       <div>
@@ -81,12 +88,27 @@ const Hotel = () => {
                       </div>
                     </div>
                     <div className="hotel__separator"></div>
+                    <div className="hotel__review">
+                      <div>
+                        <div className="hotel__rating">
+                          <p>{hotel.Review2isPositive === true ? "+" : "-"}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <p>
+                          <strong>{hotel.Review2Author}</strong>
+                        </p>
+                        <br />
+                        <p>{hotel.Review2}</p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
             </div>
           );
-        })}
+        }) : console.log('nie ma dla ciebie hoteli, śpisz pod mostem')}
+      <button onClick={loadMore} className="button button-top">Load Hotels</button>
     </div>
   );
 };

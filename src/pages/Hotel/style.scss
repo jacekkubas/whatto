@@ -1,7 +1,10 @@
 .hotel {
 
-    // display: flex;
-    // justify-content: center;
+    h1 {
+        color: #FFF;
+        text-align: center;
+        font-size: 30px;
+    }
 
     .button {
         background-color: #E5E5E5;
@@ -85,36 +88,22 @@
         z-index: -1;
         background-color: #BBBBBB;
         padding: 50px;
-        animation-duration: 1s;
+        animation-duration: 0.2s;
     }
 
     .opened {
         animation-name: slide-down;
     }
 
-    .closed {
-        animation-name: slide-up;
-    }
-
     @keyframes slide-down {
         0%{
-            transform: translateY(-300px)
+            transform: translateY(-300px);
         }
 
        100%{
-        transform: translateY(0)
+        transform: translateY(0);
        }
       }
-
-    @keyframes slide-up {
-    0%{
-        transform: translateY(0);
-    }
-
-    100%{
-    transform: translateY(300px);
-    }
-    }
 
     &__review {
         display: flex;
