@@ -1,12 +1,13 @@
 import './global.scss';
-import Home from './pages/Home'
-import Movies from './pages/Movies'
-import Food from './pages/Food'
-import Slider from './pages/Slider'
-import Cities from './pages/Cities'
-import Places from './pages/Places'
-import Login from './pages/Login'
-import Hotel from './pages/Hotel'
+import Home from './pages/Home';
+import Movies from './pages/Movies';
+import Food from './pages/Food';
+import Slider from './pages/Slider';
+import Cities from './pages/Cities';
+import Places from './pages/Places';
+import Login from './pages/Login';
+import Hotel from './pages/Hotel';
+import Steel from './pages/Steel';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/places" element={<Places />} />
           <Route path="/login" element={<Login />} />
           <Route path="/hotel" element={<Hotel />} />
+          <Route path="/steel" element={<Steel />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -107,7 +107,7 @@ const Hotel = () => {
               </div>
             </div>
           );
-        }) : console.log('nie ma dla ciebie hoteli, śpisz pod mostem')}
+        }) : <p>nie ma dla ciebie hoteli, śpisz pod mostem</p>}
       <button onClick={loadMore} className="button button-top">Load Hotels</button>
     </div>
   );
