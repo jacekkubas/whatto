@@ -1,0 +1,17 @@
+.board {
+    
+}
+
+.spot {
+    width: 80px;
+    height: 80px;
+    border: 1px #FFF solid;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.row {
+    display: flex;
+}
