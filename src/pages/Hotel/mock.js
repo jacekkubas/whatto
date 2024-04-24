@@ -4,25 +4,25 @@ import hotelPhoto3 from "./hotel3.jpg";
 import hotelPhoto4 from "./hotel4.jpg";
 import hotelPhoto5 from "./hotel5.jpg";
 
-// export const mockData = [];
+export const mockData = [];
 
-export const mockData = [
-   {
+export const mockData2 = [
+  {
     Name: "Hotel 1",
     Country: "United States",
     City: "Miami",
     Photo: { hotelPhoto1 },
     Description:
       " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies dui vel congue gravida. Morbi et erat eu urna gravida volutpat et posuere turpis.",
-      Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1Author: "Mary Jane",
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
-      Stars: 3,
+    Stars: 3,
     Price: 123,
     Available: ["22-01-2020", "22-01-2021"],
   },
@@ -33,12 +33,12 @@ export const mockData = [
     Photo: { hotelPhoto2 },
     Description:
       "Proin ultricies dui vel congue gravida. Morbi et erat eu urna gravida volutpat et posuere turpis.",
-      Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1Author: "Mary Jane",
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 2,
@@ -52,12 +52,12 @@ export const mockData = [
     Photo: { hotelPhoto3 },
     Description:
       "Proin ultricies dui vel congue gravida. Morbi et erat eu urna gravida volutpat et posuere turpis.",
-      Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1Author: "Mary Jane",
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 5,
@@ -73,11 +73,11 @@ export const mockData = [
       "Morbi et erat eu urna gravida volutpat et posuere turpis. Morbi et erat eu urna gravida volutpat et posuere turpis. Morbi et erat eu urna gravida volutpat et posuere turpis. Morbi et erat eu urna gravida volutpat et posuere turpis.",
     "Review Type": "positive",
     Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 4,
@@ -91,12 +91,12 @@ export const mockData = [
     Photo: { hotelPhoto5 },
     Description:
       "Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida.",
-      Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1Author: "Mary Jane",
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 5,
@@ -110,12 +110,12 @@ export const mockData = [
     Photo: { hotelPhoto1 },
     Description:
       "Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida. Proin ultricies dui vel congue gravida.",
-      Review1Author: "Mary Jane",
-      Review1isPositive: true,
+    Review1Author: "Mary Jane",
+    Review1isPositive: true,
     Review1:
       "Fusce at enim vel ante efficitur porttitor. Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl. Sed diam nulla, fringilla mattis eleifend consequat, ornare eget velit.",
-      Review2Author: "John Doe",
-      Review2isPositive: false,
+    Review2Author: "John Doe",
+    Review2isPositive: false,
     Review2:
       "Nullam ultricies libero sapien, ac interdum ipsum elementum a. Integer nec augue rhoncus, pulvinar odio laoreet, viverra dui. Praesent eget gravida nisl.",
     Stars: 1,
