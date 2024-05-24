@@ -9,6 +9,20 @@ const Movies = () => {
   const [movieArray, setMovieArray] = useState([]);
   const [page, setPage] = useState(random(1, 100));
 
+  let arr20 = [];
+  for (let i = 0; i < 20; i++) {
+    arr20.push(i)
+  };
+  let randomA = arr20[random(0, arr20.length)];
+  const arr19 = arr20.filter(e => e !== randomA);
+  let randomB = arr19[random(0, arr19.length)];
+  const arr18 = arr19.filter(e => e !== randomB);
+  let randomC = arr18[random(0, arr20.length)];
+
+  // let randomA = random(0, 19);
+  // let randomB = random(0, 19);
+  // let randomC = random(0, 19);
+
   const options = {
     method: 'GET',
     headers: {
@@ -22,11 +36,11 @@ const Movies = () => {
     await fetch(`https://api.themoviedb.org/3/movie/top_rated?page=${page}`, options)
     .then(response => response.json())
     .then(response => {
-      const newArr = [response.results[random(0, 19)], response.results[random(0, 19)], response.results[random(0, 19)]];
+      const newArr = [response.results[randomA], response.results[randomB], response.results[randomC]];
       setMovieArray([...newArr]);
+      console.log(randomA, randomB, randomC);
     })
     .catch(err => {console.error(err)});
-
     setPage(random(1, 100));
   }
 
