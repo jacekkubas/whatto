@@ -17,7 +17,7 @@ const Movies = () => {
   const arr19 = arr20.filter(e => e !== randomA);
   let randomB = arr19[random(0, arr19.length)];
   const arr18 = arr19.filter(e => e !== randomB);
-  let randomC = arr18[random(0, arr20.length)];
+  let randomC = arr18[random(0, arr18.length)];
 
   // let randomA = random(0, 19);
   // let randomB = random(0, 19);
@@ -38,7 +38,7 @@ const Movies = () => {
     .then(response => {
       const newArr = [response.results[randomA], response.results[randomB], response.results[randomC]];
       setMovieArray([...newArr]);
-      console.log(randomA, randomB, randomC);
+      console.log(response);
     })
     .catch(err => {console.error(err)});
     setPage(random(1, 100));
